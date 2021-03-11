@@ -26,7 +26,7 @@ import (
 	"math"
 	"time"
 
-	pb "github.com/milvus-io/milvus-sdk-go/milvus/grpc/gen"
+	pb "github.com/zilliztech/milvus-cloud-sdk-go/milvus/grpc/gen"
 	"google.golang.org/grpc"
 )
 

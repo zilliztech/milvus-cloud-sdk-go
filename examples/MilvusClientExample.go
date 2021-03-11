@@ -20,7 +20,7 @@
 package main
 
 import (
-	"github.com/milvus-io/milvus-sdk-go/milvus"
+	"github.com/zilliztech/milvus-cloud-sdk-go/milvus"
 	"strconv"
 	"time"
 )

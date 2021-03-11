@@ -24,7 +24,7 @@ import (
 	"context"
 	"time"
 
-	pb "github.com/milvus-io/milvus-sdk-go/milvus/grpc/gen"
+	pb "github.com/zilliztech/milvus-cloud-sdk-go/milvus/grpc/gen"
 )
 
 var timeout time.Duration = 10 * time.Second
