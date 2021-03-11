@@ -29,7 +29,7 @@ Go 1.12 or higher
 1. Use `go get` to install the latest version of the Milvus Go SDK and dependencies:
 
    ```shell
-   go get -u github.com/zilliztech/milvus-cloud-sdk-go
+   go get -u github.com/zilliztech/milvus-cloud-sdk-go/milvus
    ```
 
 2. Include the Milvus Go SDK in your application:
