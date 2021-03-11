@@ -41,7 +41,7 @@ Go 1.12 or higher
 #### Try an example
 
 ```shell
-cd [milvus-sdk-go root path]/examples
+cd [milvus-cloud-sdk-go root path]/examples
 go run MilvusClientExample.go
 ```
 
