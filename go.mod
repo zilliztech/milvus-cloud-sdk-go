@@ -1,4 +1,3 @@
-//module github.com/milvus-io/milvus-sdk-go
 module github.com/zilliztech/milvus-cloud-sdk-go
 
 go 1.12
