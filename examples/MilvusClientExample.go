@@ -31,7 +31,8 @@ var indexFileSize int64 = 1024
 var metricType int64 = int64(milvus.L2)
 var nq int64 = 100
 var nprobe int64 = 64
-var nb int64 = 100000
+
+var nb int64 = 10000
 var topk int64 = 100
 var nlist int64 = 16384
 
@@ -310,7 +311,8 @@ func example(address string, port string, token string) {
 func main() {
 	//address := "localhost"
 	//port := "19535"
-	address := "i-604b0c80233803e86b1743ff-ingress.azure-1.cloud-db.zilliz.com"
+	//example(address, port, "123456")
+	address := "i-604b23a38a2c8503e184e33f-ingress.azure-1.cloud-db.zilliz.com"
 	port := "443"
-	example(address, port, "22dc90eb59c2f518de88e11ed287d28a735e5d93986e4942445ec905319c3163")
+	example(address, port, "9a7b00f8ecb247fa172d01d155124f82014e9ec82df02a3f2cf972e9900e0724")
 }
