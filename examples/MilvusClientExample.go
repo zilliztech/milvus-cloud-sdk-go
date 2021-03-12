@@ -308,7 +308,9 @@ func example(address string, port string, token string) {
 }
 
 func main() {
-	address := "localhost"
-	port := "19535"
-	example(address, port, "123456")
+	//address := "localhost"
+	//port := "19535"
+	address := "i-604b0c80233803e86b1743ff-ingress.azure-1.cloud-db.zilliz.com"
+	port := "443"
+	example(address, port, "22dc90eb59c2f518de88e11ed287d28a735e5d93986e4942445ec905319c3163")
 }

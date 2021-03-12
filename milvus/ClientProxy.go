@@ -26,8 +26,10 @@ import (
 	"math"
 	"time"
 
+	"crypto/tls"
 	pb "github.com/zilliztech/milvus-cloud-sdk-go/milvus/grpc/gen"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials"
 )
 
 type Milvusclient struct {
@@ -44,11 +46,17 @@ func (client *Milvusclient) GetClientVersion() string {
 }
 
 func (client *Milvusclient) Connect(connectParam ConnectParam) error {
+
+	config := &tls.Config{
+		InsecureSkipVerify: true,
+	}
+
 	var opts []grpc.DialOption
-	opts = append(opts, grpc.WithInsecure())
+	//opts = append(opts, grpc.WithInsecure())
 	opts = append(opts, grpc.WithBlock())
 	opts = append(opts, grpc.WithDefaultCallOptions(grpc.MaxCallSendMsgSize(math.MaxInt64)))
 	opts = append(opts, grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(math.MaxInt64)))
+	opts = append(opts, grpc.WithTransportCredentials(credentials.NewTLS(config)))
 
 	token := CloudToken{Token: connectParam.Token}
 	opts = append(opts, grpc.WithPerRPCCredentials(token))
